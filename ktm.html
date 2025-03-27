@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTM - PATO Motorcycles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2"></i>PATO Motorcycles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" onclick="verCarrito()">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">
+            <img src="img/kl.png" alt="KTM" style="height: 60px; margin-right: 20px;">
+            KTM
+        </h1>
+
+        <!-- Deportivas -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k1.jpg" class="card-img-top moto-img" alt="KTM RC 390">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM RC 390</h5>
+                        <p class="card-text">Deportiva ligera con ADN de competición.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>373cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>43 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>155 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>ByBre, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>170 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM RC 390', 145000)">
+                            <i class="fas fa-tag me-2"></i>$145,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k8.jpg" class="card-img-top moto-img" alt="KTM RC 8C">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM RC 8C</h5>
+                        <p class="card-text">Superbike de edición limitada para circuito.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>889cc, 2 cilindros paralelos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>128 HP @ 10,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>140 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Racing</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>280 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM RC 8C', 850000)">
+                            <i class="fas fa-tag me-2"></i>$850,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Naked -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-bolt me-2"></i>Naked
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/kt3.jpg" class="card-img-top moto-img" alt="KTM 1290 Super Duke R">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM 1290 Super Duke R</h5>
+                        <p class="card-text">La bestia, la naked más radical del mercado.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1301cc, V-Twin</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>180 HP @ 9,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>189 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>290 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM 1290 Super Duke R', 420000)">
+                            <i class="fas fa-tag me-2"></i>$420,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/kt4.jpg" class="card-img-top moto-img" alt="KTM 890 Duke R">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM 890 Duke R</h5>
+                        <p class="card-text">La super scalpel, precisión en estado puro.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>889cc, 2 cilindros paralelos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>121 HP @ 9,250 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>166 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Monoblock</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>240 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM 890 Duke R', 280000)">
+                            <i class="fas fa-tag me-2"></i>$280,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k1.jpg" class="card-img-top moto-img" alt="KTM RC 390">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM RC 390</h5>
+                        <p class="card-text">Deportiva ligera con ADN de competición.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>373cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>43 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>155 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>ByBre, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>170 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM RC 390', 145000)">
+                            <i class="fas fa-tag me-2"></i>$145,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k8.jpg" class="card-img-top moto-img" alt="KTM RC 8C">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM RC 8C</h5>
+                        <p class="card-text">Superbike de edición limitada para circuito.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>889cc, 2 cilindros paralelos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>128 HP @ 10,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>140 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Racing</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>280 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM RC 8C', 850000)">
+                            <i class="fas fa-tag me-2"></i>$850,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adventure -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-mountain me-2"></i>Adventure
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/kt5.jpg" class="card-img-top moto-img" alt="KTM 1290 Super Adventure S">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM 1290 Super Adventure S</h5>
+                        <p class="card-text">La maxitrail más deportiva del mercado.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1301cc, V-Twin</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>160 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>220 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo con ABS en curva</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>260 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM 1290 Super Adventure S', 460000)">
+                            <i class="fas fa-tag me-2"></i>$460,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enduro -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tree me-2"></i>Enduro
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/kt6.jpg" class="card-img-top moto-img" alt="KTM 350 EXC-F">
+                    <div class="card-body">
+                        <h5 class="card-title">KTM 350 EXC-F</h5>
+                        <p class="card-text">La enduro más versátil de la gama.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>350cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>45 HP @ 11,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>103 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>140 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('KTM 350 EXC-F', 220000)">
+                            <i class="fas fa-tag me-2"></i>$220,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

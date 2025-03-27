@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATO Motorcycles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">PATO Motorcycles</a>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-light position-relative" onclick="verCarrito()">
+                    <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                </button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Administrar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5" id="productos">
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-4">Bienvenido a PATO Motorcycles</h1>
+            <p class="lead">Descubre nuestra selección de las mejores marcas de motocicletas</p>
+        </div>
+
+        <div id="resultado-compra" class="mt-3"></div>
+
+        <div class="row marcas-container">
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/honda1.jpg" class="card-img-top p-4" alt="Honda">
+                        <h5 class="card-title mt-3">Honda</h5>
+                        <p class="card-text">Descubre la excelencia japonesa en cada modelo</p>
+                        <a href="honda.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/yl.png" class="card-img-top p-4" alt="Yamaha">
+                        <h5 class="card-title mt-3">Yamaha</h5>
+                        <p class="card-text">Potencia y estilo en cada motocicleta</p>
+                        <a href="yamaha.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/kl.jpg" class="card-img-top p-4" alt="Kawasaki">
+                        <h5 class="card-title mt-3">Kawasaki</h5>
+                        <p class="card-text">La velocidad y el poder en su máxima expresión</p>
+                        <a href="kawasaki.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row marcas-container">
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/bl.png" class="card-img-top p-4" alt="Bajaj">
+                        <h5 class="card-title mt-3">Bajaj</h5>
+                        <p class="card-text">Descubre la excelencia japonesa en cada modelo</p>
+                        <a href="bajaj.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/bl.jpeg" class="card-img-top p-4" alt="BMW">
+                        <h5 class="card-title mt-3">BMW</h5>
+                        <p class="card-text">Potencia y estilo en cada motocicleta</p>
+                        <a href="bmw.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/dl.png" class="card-img-top p-4" alt="Ducati">
+                        <h5 class="card-title mt-3">Ducati</h5>
+                        <p class="card-text">La velocidad y el poder en su máxima expresión</p>
+                        <a href="ducati.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row marcas-container">
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/il.png" class="card-img-top p-4" alt="Italika">
+                        <h5 class="card-title mt-3">Italika</h5>
+                        <p class="card-text">Descubre la excelencia japonesa en cada modelo</p>
+                        <a href="italika.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/kl.jpg" class="card-img-top p-4" alt="KTM">
+                        <h5 class="card-title mt-3">KTM</h5>
+                        <p class="card-text">Potencia y estilo en cada motocicleta</p>
+                        <a href="ktm.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/sl.jpg" class="card-img-top p-4" alt="Suzuki">
+                        <h5 class="card-title mt-3">Suzuki</h5>
+                        <p class="card-text">La velocidad y el poder en su máxima expresión</p>
+                        <a href="suzuki.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row marcas-container">
+            <center>
+            <div class="col-md-4 mb-4">
+                <div class="card marca-card">
+                    <div class="card-body text-center">
+                        <img src="img/hel.png" class="card-img-top p-4" alt="Hero">
+                        <h5 class="card-title mt-3">Hero</h5>
+                        <p class="card-text">Descubre la excelencia japonesa en cada modelo</p>
+                        <a href="hero.html" class="btn btn-primary w-100">
+                            <i class="fas fa-motorcycle me-2"></i>Ver modelos
+                        </a>
+                    </div>
+                </div>
+            </div></center>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="finalizarCompra()">
+                        <i class="fas fa-check me-2"></i>Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="buscarCompradorModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Buscar Comprador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="nombre-comprador" placeholder="Ingresa el nombre del comprador">
+                    <div id="resultado-compra" class="mt-3"></div>
+                    <button class="btn btn-secondary mt-2" onclick="limpiarResultados()">Limpiar</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="realizarBusqueda()">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión / Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" id="login-username" placeholder="Nombre de usuario">
+                    <input type="password" class="form-control mb-2" id="login-password" placeholder="Contraseña">
+                    <button class="btn btn-primary w-100" onclick="iniciarSesion()">Iniciar Sesión</button>
+                    <button class="btn btn-secondary w-100 mt-2" onclick="registrarse()">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="agregarProductoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="productoForm" onsubmit="guardarProducto(); return false;">
+                        <input type="text" class="form-control mb-2" id="producto-nombre" placeholder="Nombre del producto">
+                        <input type="number" class="form-control mb-2" id="producto-precio" placeholder="Precio">
+                        <input type="text" class="form-control mb-2" id="producto-marca" placeholder="Marca">
+                        <input type="text" class="form-control mb-2" id="producto-modelo" placeholder="Modelo">
+                        <input type="text" class="form-control mb-2" id="producto-tipo" placeholder="Tipo de moto">
+                        <input type="file" class="form-control mb-2" id="producto-imagen" accept="image/*">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gestionarProductoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gestionar Productos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" id="producto-nombre" placeholder="Nombre del producto">
+                    <input type="number" class="form-control mb-2" id="producto-precio" placeholder="Precio">
+                    <input type="text" class="form-control mb-2" id="producto-marca" placeholder="Marca">
+                    <input type="text" class="form-control mb-2" id="producto-modelo" placeholder="Modelo">
+                    <input type="text" class="form-control mb-2" id="producto-tipo" placeholder="Tipo de moto">
+                    <input type="file" class="form-control mb-2" id="producto-imagen" accept="image/*">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="agregarProducto()">Agregar Producto</button>
+                    <button type="button" class="btn btn-danger" onclick="eliminarProducto()">Eliminar Producto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-motorcycle me-2"></i>PATO Motorcycles</h5>
+                    <p>Motocicletas de calidad</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Ubicación</h5>
+                    <p>UTM<br>Merida, Yucatan, México</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-envelope me-2"></i>Contacto</h5>
+                    <p>Email: acanche044@gmail.com<br>Tel: (52)9991393169</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

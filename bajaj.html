@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajaj - PATO Motorcycles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2"></i>PATO Motorcycles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" onclick="verCarrito()">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">
+            <img src="img/bl.png" alt="Bajaj" style="height: 60px; margin-right: 20px;">
+            Bajaj
+        </h1>
+
+        <!-- Deportivas -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/b1.avif" class="card-img-top moto-img" alt="Bajaj Pulsar RS200">
+                    <div class="card-body">
+                        <h5 class="card-title">Bajaj Pulsar RS200</h5>
+                        <p class="card-text">La deportiva más avanzada de Bajaj con tecnología triple bujía.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>199.5cc, Monocilíndrico DTS-i</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>24.5 HP @ 9,750 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>165 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero y trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>140 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Bajaj Pulsar RS200', 65000)">
+                            <i class="fas fa-tag me-2"></i>$65,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Naked -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-bolt me-2"></i>Naked
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/b2.webp" class="card-img-top moto-img" alt="Bajaj Pulsar NS200">
+                    <div class="card-body">
+                        <h5 class="card-title">Bajaj Pulsar NS200</h5>
+                        <p class="card-text">La naked deportiva con chasis perimetral y alto rendimiento.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>199.5cc, Monocilíndrico DTS-i</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>23.5 HP @ 9,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>156 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero y trasero, CBS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>136 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Bajaj Pulsar NS200', 58000)">
+                            <i class="fas fa-tag me-2"></i>$58,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/b3.png" class="card-img-top moto-img" alt="Bajaj Dominar 400">
+                    <div class="card-body">
+                        <h5 class="card-title">Bajaj Dominar 400</h5>
+                        <p class="card-text">La naked premium con tecnología derivada de KTM.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>373.3cc, Monocilíndrico DOHC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>40 HP @ 8,800 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>187 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero y trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>155 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Bajaj Dominar 400', 85000)">
+                            <i class="fas fa-tag me-2"></i>$85,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trabajo -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-briefcase me-2"></i>Trabajo
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/b4.png" class="card-img-top moto-img" alt="Bajaj Platina 110">
+                    <div class="card-body">
+                        <h5 class="card-title">Bajaj Platina 110</h5>
+                        <p class="card-text">La motocicleta más eficiente para el trabajo diario.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>115cc, Monocilíndrico DTS-i</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>8.6 HP @ 7,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>119 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Tambor delantero y trasero</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>90 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Bajaj Platina 110', 28000)">
+                            <i class="fas fa-tag me-2"></i>$28,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/b5.jpg" class="card-img-top moto-img" alt="Bajaj Boxer 150">
+                    <div class="card-body">
+                        <h5 class="card-title">Bajaj Boxer 150</h5>
+                        <p class="card-text">La motocicleta resistente para carga y trabajo pesado.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>144.8cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>12 HP @ 7,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>125 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Tambor delantero y trasero</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>95 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Bajaj Boxer 150', 32000)">
+                            <i class="fas fa-tag me-2"></i>$32,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

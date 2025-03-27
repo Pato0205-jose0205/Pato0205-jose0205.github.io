@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawasaki - PATO Motorcycles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2"></i>PATO Motorcycles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" onclick="verCarrito()">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">
+            <img src="img/kl.jpg" alt="Kawasaki" style="height: 60px; margin-right: 20px;">
+            Motos Kawasaki
+        </h1>
+
+        <!-- Deportivas -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k1.png" class="card-img-top moto-img" alt="Kawasaki Ninja ZX-10R">
+                    <div class="card-body">
+                        <h5 class="card-title">Kawasaki Ninja ZX-10R</h5>
+                        <p class="card-text">La superbike campeona del WorldSBK con Jonathan Rea.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>998cc, 4 cilindros en línea</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>203 HP @ 13,200 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>207 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>299 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Kawasaki Ninja ZX-10R', 400000)">
+                            <i class="fas fa-tag me-2"></i>$400,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k2.jpg" class="card-img-top moto-img" alt="Kawasaki Ninja 400">
+                    <div class="card-body">
+                        <h5 class="card-title">Kawasaki Ninja 400</h5>
+                        <p class="card-text">Deportiva ligera ideal para iniciarse en el mundo de las dos ruedas.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>399cc, 2 cilindros paralelos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>49 HP @ 10,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>168 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero y trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>190 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Kawasaki Ninja 400', 160000)">
+                            <i class="fas fa-tag me-2"></i>$160,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Naked -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-bolt me-2"></i>Naked
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k3.png" class="card-img-top moto-img" alt="Kawasaki Z900">
+                    <div class="card-body">
+                        <h5 class="card-title">Kawasaki Z900</h5>
+                        <p class="card-text">Naked deportiva con el espíritu Sugomi de Kawasaki.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>948cc, 4 cilindros en línea</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>125 HP @ 9,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>212 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Doble disco delantero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>245 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Kawasaki Z900', 250000)">
+                            <i class="fas fa-tag me-2"></i>$250,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trabajo -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-briefcase me-2"></i>Trabajo
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/k4.jpg" class="card-img-top moto-img" alt="Kawasaki KLX150">
+                    <div class="card-body">
+                        <h5 class="card-title">Kawasaki KLX150</h5>
+                        <p class="card-text">Motocicleta versátil para trabajo y aventura ligera.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>144cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>12 HP @ 8,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>118 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero, Tambor trasero</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>110 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Kawasaki KLX150', 45000)">
+                            <i class="fas fa-tag me-2"></i>$45,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

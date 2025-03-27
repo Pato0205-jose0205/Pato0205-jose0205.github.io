@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ducati - PATO Motorcycles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2"></i>PATO Motorcycles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" onclick="verCarrito()">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">
+            <img src="img/dl.png" alt="Ducati" style="height: 60px; margin-right: 20px;">
+            Ducati
+        </h1>
+
+        <!-- Deportivas -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d1.webp" class="card-img-top moto-img" alt="Ducati Panigale V4 R">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Panigale V4 R</h5>
+                        <p class="card-text">La máxima expresión de la tecnología racing de Ducati.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>998cc, V4 Desmosedici Stradale R</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>240.5 HP @ 15,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>193 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema R, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>299 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati Panigale V4 R', 980000)">
+                            <i class="fas fa-tag me-2"></i>$980,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d2.png" class="card-img-top moto-img" alt="Ducati SuperSport 950 S">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati SuperSport 950 S</h5>
+                        <p class="card-text">Deportividad elegante para uso diario.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>937cc, Testastretta 11°</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>110 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>184 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Monobloc, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>255 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati SuperSport 950 S', 420000)">
+                            <i class="fas fa-tag me-2"></i>$420,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Naked -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-bolt me-2"></i>Naked
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d3.webp" class="card-img-top moto-img" alt="Ducati Streetfighter V4 SP2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Streetfighter V4 SP2</h5>
+                        <p class="card-text">La naked más potente y tecnológica.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1103cc, V4 Desmosedici Stradale</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>208 HP @ 13,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>197 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema R, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>280 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati Streetfighter V4 SP2', 850000)">
+                            <i class="fas fa-tag me-2"></i>$850,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d4.webp" class="card-img-top moto-img" alt="Ducati Monster">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Monster</h5>
+                        <p class="card-text">El ícono naked de Ducati reinventado.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>937cc, Testastretta 11°</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>111 HP @ 9,250 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>188 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Monobloc, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>245 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati Monster', 380000)">
+                            <i class="fas fa-tag me-2"></i>$380,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adventure -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-mountain me-2"></i>Adventure
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d5.png" class="card-img-top moto-img" alt="Ducati Multistrada V4 Rally">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Multistrada V4 Rally</h5>
+                        <p class="card-text">La máxima expresión de la aventura.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1158cc, V4 Granturismo</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>170 HP @ 10,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>227 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>250 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati Multistrada V4 Rally', 780000)">
+                            <i class="fas fa-tag me-2"></i>$780,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cruiser -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-road me-2"></i>Cruiser
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/d6.webp" class="card-img-top moto-img" alt="Ducati Diavel V4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Diavel V4</h5>
+                        <p class="card-text">La power cruiser que redefine el segmento.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1158cc, V4 Granturismo</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>168 HP @ 10,750 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>236 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo Stylema, ABS Cornering</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>260 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Ducati Diavel V4', 720000)">
+                            <i class="fas fa-tag me-2"></i>$720,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki - PATO Motorcycles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-motorcycle me-2"></i>PATO Motorcycles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light" onclick="verCarrito()">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito (<span id="total-items">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">
+            <img src="img/sl.jpg" alt="Suzuki" style="height: 60px; margin-right: 20px;">
+            Suzuki
+        </h1>
+
+        <!-- Deportivas -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Deportivas
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s1.jpg" class="card-img-top moto-img" alt="Suzuki GSX-R1000R">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GSX-R1000R</h5>
+                        <p class="card-text">La superbike definitiva con tecnología MotoGP.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>999.8cc, 4 cilindros en línea DOHC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>202 HP @ 13,200 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>203 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Brembo doble disco delantero, disco trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>299 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GSX-R1000R', 389000)">
+                            <i class="fas fa-tag me-2"></i>$389,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s2.png" class="card-img-top moto-img" alt="Suzuki GSX-R750">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GSX-R750</h5>
+                        <p class="card-text">La deportiva original que combina potencia y agilidad.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>750cc, 4 cilindros en línea DOHC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>148 HP @ 13,200 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>190 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Doble disco delantero, disco trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>280 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GSX-R750', 259000)">
+                            <i class="fas fa-tag me-2"></i>$259,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Naked -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-bolt me-2"></i>Naked
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s3.webp" class="card-img-top moto-img" alt="Suzuki GSX-S1000">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GSX-S1000</h5>
+                        <p class="card-text">Naked deportiva con el corazón de la GSX-R.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>999cc, 4 cilindros en línea DOHC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>152 HP @ 11,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>214 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Doble disco delantero, disco trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>260 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GSX-S1000', 279000)">
+                            <i class="fas fa-tag me-2"></i>$279,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Ciudad -->
+          <h2 class="categoria-titulo">
+            <i class="fas fa-tachometer-alt me-2"></i>Ciudad
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s4.png" class="card-img-top moto-img" alt="Suzuki GIXXER 250">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GIXXER 250 ABS</h5>
+                        <p class="card-text">La Suzuki con frenos ABS</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>4 tiempos, 1c, SOHC, 4v, 250cc</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>26.1 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>156 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>disco ventilado delantero, ABS, disco ventilado trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>150 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GIXXER 250 ABS', 84990)">
+                            <i class="fas fa-tag me-2"></i>$84, 990 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s5.png" class="card-img-top moto-img" alt="Suzuki GIXXER SF 250">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GIXXER SF 250 ABS</h5>
+                        <p class="card-text">La Suzuki de ciudad tipo deportiva con frenos ABS</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>249cc, 1 cilindros en línea DOHC, 4v</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>26.1 HP @ 9,000 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>161 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Doble disco delantero, disco trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>155 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GIXXER SF 250 ABS', 89990)">
+                            <i class="fas fa-tag me-2"></i>$89, 990 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adventure -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-mountain me-2"></i>Adventure
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s6.png" class="card-img-top moto-img" alt="Suzuki V-Strom 1050XT">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki V-Strom 1050XT</h5>
+                        <p class="card-text">La aventurera versátil para cualquier destino.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>1037cc, V-Twin DOHC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>107 HP @ 8,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>247 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Doble disco delantero, disco trasero, ABS</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>200 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki V-Strom 1050XT', 299000)">
+                            <i class="fas fa-tag me-2"></i>$299,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trabajo -->
+        <h2 class="categoria-titulo">
+            <i class="fas fa-briefcase me-2"></i>Trabajo
+        </h2>
+        <div class="row">
+            <div class="col-md-6 moto-card">
+                <div class="card">
+                    <img src="img/s7.png" class="card-img-top moto-img" alt="Suzuki GN125">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki GN125</h5>
+                        <p class="card-text">Motocicleta confiable y económica para el trabajo diario.</p>
+                        <div class="moto-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Motor:</span>
+                                <span>124cc, Monocilíndrico</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Potencia:</span>
+                                <span>12.5 HP @ 9,500 rpm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso:</span>
+                                <span>126 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Frenos:</span>
+                                <span>Disco delantero, tambor trasero</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Velocidad Máx:</span>
+                                <span>95 km/h</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary precio-btn mt-3 w-100" onclick="agregarAlCarrito('Suzuki GN125', 35000)">
+                            <i class="fas fa-tag me-2"></i>$35,000 MXN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart me-2"></i>Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrito-items"></div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="carrito-total">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
